@@ -40,6 +40,7 @@ export default (doc: HTMLDocument) => {
   const VSCodeIcon = ({style}: {style?: string}) => img({...(style ? {style} : {}), src: "/vs-code-16x16.png", height: "16", width: "16", "aria-hidden": true})
 
   return div({id: "content"},
+    p(i("🚨 My GitHub account was flagged due to some suspicious login activities (I've no idea what happened). As a result, all ", VanJS(), " repos hosted in GitHub and my GitHub accounts are currently unavailable. This website (which was hosted via GitHub Pages) was also down for 2 hours (recovered after migrated to ", Link("Deno Deploy", "https://deno.com/deploy"), "). I have reached out to GitHub support team and will do my best to restore the access of my GitHub repos. Sorry for all the inconvenience. 🙏🙏🙏")),
     H1(VanJS(), ": A 1.0kB Grab 'n Go Reactive UI Framework without React/JSX"),
     p(
       div("📣 ", Link("Introducing ", VanX(), " →", "https://github.com/vanjs-org/van/discussions/144")),
