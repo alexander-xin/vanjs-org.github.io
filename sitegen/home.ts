@@ -4,7 +4,7 @@ import { HTMLDocument } from "https://deno.land/x/deno_dom@v0.1.38/deno-dom-wasm
 
 export default (doc: HTMLDocument) => {
   const {tags: {a, b, blockquote, clipPath, defs, div, g, i, img, input, label, li, p, path, rect, span, svg, table, tbody, td, th, thead, title, tr, ul}} = van.vanWithDoc(doc)
-  const {BI, Demo, H1, H2, H3, Js, Link, MiniVan, Quote, Symbol, VanJS, VanUI, VanX} = common(doc)
+  const {BI, Demo, H1, H2, H3, Js, Link, MiniVan, Quote, Symbol, Url, VanJS, VanUI, VanX} = common(doc)
 
   const mailIcon = svg({viewBox: "0 0 16 16", version: "1.1", width: 16, height: 16, "aria-hidden": true},
     path({"d": "M1.75 2h12.5c.966 0 1.75.784 1.75 1.75v8.5A1.75 1.75 0 0 1 14.25 14H1.75A1.75 1.75 0 0 1 0 12.25v-8.5C0 2.784.784 2 1.75 2ZM1.5 12.251c0 .138.112.25.25.25h12.5a.25.25 0 0 0 .25-.25V5.809L8.38 9.397a.75.75 0 0 1-.76 0L1.5 5.809v6.442Zm13-8.181v-.32a.25.25 0 0 0-.25-.25H1.75a.25.25 0 0 0-.25.25v.32L8 7.88Z"}),
@@ -41,6 +41,7 @@ export default (doc: HTMLDocument) => {
 
   return div({id: "content"},
     p(i("🚨 My GitHub account was flagged due to some suspicious login activities (I've no idea what happened). As a result, all ", VanJS(), " repos hosted in GitHub and my GitHub accounts are currently unavailable. This website (which was hosted via GitHub Pages) was also down for 2 hours (recovered after migrated to ", Link("Deno Deploy", "https://deno.com/deploy"), "). I have reached out to GitHub support team and will do my best to restore the access of my GitHub repos. Sorry for all the inconvenience. 🙏🙏🙏")),
+    p(i("If you need the access to the source code of ", VanJS(), ", you can check out the file: ", Link("van-1.5.0.js", "/code/van-1.5.0.js"), ".")),
     H1(VanJS(), ": A 1.0kB Grab 'n Go Reactive UI Framework without React/JSX"),
     p(
       div("📣 ", Link("Introducing ", VanX(), " →", "https://github.com/vanjs-org/van/discussions/144")),
