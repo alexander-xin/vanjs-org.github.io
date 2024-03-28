@@ -4,7 +4,7 @@ import { emptyDirSync } from "https://deno.land/std@0.184.0/fs/mod.ts"
 import { join } from "https://deno.land/std@0.184.0/path/mod.ts"
 
 const jsFiddleRoot = "jsfiddle"
-const ghPath = "vanjs-org/vanjs-org.github.io/tree/master/jsfiddle"
+const ghPath = "alexander-xin/vanjs-org.github.io/tree/master/jsfiddle"
 
 const mkdirIfNotExist = (dir: string) => {
   try {
