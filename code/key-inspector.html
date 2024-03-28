@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="icon" href="/logo.svg">
+    <title>Keydown Event Inspector</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      .label {
+        width: 80px;
+        font-weight: bold;
+      }
+
+      .value { width: 80px; }
+
+      .label, .value {
+        font: monospace;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <script type="module">
+      import van from "./van-latest.min.js"
+
+      const {div, input, span} = van.tags
+
+      const Label = text => span({class: "label"}, text)
+      const Value = text => span({class: "value"}, text)
+
+      const Inspector = () => {
+        const keyEvent = van.state(new KeyboardEvent("keydown"))
+
+        const Result = prop => span(Label(prop + ": "), Value(() => keyEvent.val[prop]))
+
+        return div(
+          div(input({placeholder: "Focus here and press keys…", style: "width: 260px",
+            onkeydown: e => (e.preventDefault(), keyEvent.val = e)})),
+          div(Result("key"), Result("code"), Result("which"), Result("keyCode")),
+          div(Result("ctrlKey"), Result("metaKey"), Result("altKey"), Result("shiftKey")),
+        )
+      }
+
+      van.add(document.body, Inspector())
+    </script>
+  </body>
+</html>

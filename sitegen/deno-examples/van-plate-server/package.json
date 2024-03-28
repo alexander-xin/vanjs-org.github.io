@@ -1,0 +1,13 @@
+{
+  "name": "van-plate-deno-demo",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "deno run --allow-net van-plate-server.ts"
+  },
+  "devDependencies": {
+    "deno-bin": "^1.36.0",
+    "mini-van-plate": "^0.5.6"
+  }
+}

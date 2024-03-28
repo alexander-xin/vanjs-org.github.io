@@ -1,0 +1,15 @@
+{
+  "deno.enablePaths": [
+    "sitegen/",
+    "deno-serve.ts"
+  ],
+  "cSpell.words": [
+    "autogrow",
+    "SDUI",
+    "sitegen",
+    "todos",
+    "uplevels",
+    "vanui",
+    "vanx"
+  ]
+}

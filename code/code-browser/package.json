@@ -1,0 +1,18 @@
+{
+  "name": "code-browser",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^4.3.9"
+  },
+  "dependencies": {
+    "terser": "^5.20.0",
+    "vanjs-core": "^1.5.0"
+  }
+}
